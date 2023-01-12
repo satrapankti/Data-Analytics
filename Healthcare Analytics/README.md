@@ -11,4 +11,4 @@ Solving KPI by generating Dashboard using tools like Excel & Tableau.
 7. Total Drug Submitted Charge Amount  
 8. Number of Medicare Beneficiaries
 
-Tableau File can also be viewed here: 
+Tableau File can also be viewed here: https://public.tableau.com/app/profile/satrapankti/viz/HealthcareAnalytics_16734338181480/Main
