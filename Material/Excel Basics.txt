@@ -15,12 +15,14 @@ FORMULAS:
 13. IFERROR(value, value if error) – Can be added before any formula to avoid errors.
 14. OR(logic)(+) – This is a logical operator also. If any of this logic is True then will return True. Can add multiple logic calculations.
 15. AND (logic)(*) – This is a logical operator also. If any one of the logics is False, it will return False. All the logical conditions need to be satisfied to return True. Can add multiple logic calculations.
+
 LOOKUP FUNCTIONS :
 16. VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) – Vertical top to bottom lookup where table array is wherein to search and col_index for column for which value is returned and range lookup  has TRUE(1) for approx match and FALSE(0) for exact match. The whole Table should be specified in table array. Lookup value should be which is common for both table search.
 17. HLOOKUP((lookup_value, table_array, col_index_num, [range_lookup]) – Similar to Vlookup but looks up for value  from left to right.
 18. INDEX(array, row_num, [column_num]) – Returns the value of a cell in a table based on the column and row number. (Works on single column only).
 19. MATCH(lookup_value, lookup_array, [match_type]) - Returns the position of a cell in a row or column (select the lookup array range such that first column/row should as per lookup value only)
 20. CHOOSE(index_num, value) – Return a value from the list based on a specified position.
+
 TEXT FUNCTIONS:
 21. LEFT(text,[num_chars]) – To extract text from specified number of left characters including spaces.
 22. RIGHT(text,[num_chars]) – To extract text from specified number of right characters including spaces.
@@ -37,6 +39,7 @@ TEXT FUNCTIONS:
 *13 – 23 are only meant for textual cells.
 33. CONCATENATE(“text”, “text”) – Merges two cell values.(can also be done by adding & between two cell reference)
 34. TEXT(value, format_text) - Applying formatting
+
 DATE FUNCTIONS:
 35. TODAY() – Returns todays date as formatted date. (* Ctrl + ;)
 36. Add/Subtract Days can simply add + - between two date cell reference
@@ -60,6 +63,7 @@ NOTES:
 Single                          Single           SUMIF, COUNTIF, AVERAGEIF
 Multiple                      Single           SUMIFS, COUNTIFS, AVERAGEIFS
 Multiple/ Single	      Multiple        DCOUNT, DSUM, DMAX (Database Functions)
+
 LOGICAL OPERATORS:
 Condition (Operators) - 
 1. Equal to (=) 
@@ -70,16 +74,21 @@ Condition (Operators) -
 6. Less than equal to (<=)
 7. OR(logic) – This is a formula also. If any of this logic is True then will return True. Can add multiple logic calculations.
 8. AND (logic) – This is a formula also. If any one of the logics is False, it will return False. All the logical conditions need to be satisfied to return True. Can add multiple logic calculations.
+
 CONDITIONAL FORMATTING:
 It is highlighting of cells based on criteria. Like equations, top &  bottom. It can add highlighting colours to cell, text , it can also add symbols, progress bar. New Rules can be added, managed to edit and cleared to delete.
+
 DATA VALIDATION:
 It is used for creating a drop-down selection where you can add list of selections. 
 Data – Data Validation – List – Add source or type down.
+
 TEXT TO COLUMNS:
 To separate two objects from the cell at a particular location. Data – Text to columns. A Delimiter is a must.
+
 DEFINE NAMES:
 We can give names to specific columns / rows so that while typing no need to add range but just the name itself makes it easy.
 Formulas – Define Names
+
 CONSOLIDATE TABLE:
 1. Create three tables
 2. Keep cell in the first table  (List1)
@@ -92,6 +101,7 @@ CONSOLIDATE TABLE:
 9. Add the name defined List1,List2,List3 in references
 10. Select top Raw and Left Column
 11. Click on Ok
+
 SHORCUTS: (Alt+ will lead to most)
 1. Ctrl + A	 To select all the contents in a workbook
 2. Ctrl + B	 To turn highlighted cells bold
