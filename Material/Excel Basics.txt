@@ -1,0 +1,142 @@
+EXCEL
+FORMULAS: 
+1. SUM(range) - Addition of cell range, can specify numbers also by , separator.(* Alt =)
+2. SUMIF(range, criteria, [sum range]) – Add cells based on certain criteria/condition. 
+3. SUMPRODUCT(array, array) -  multiply both the array values and then sums up the value. (Use Double Negative for easy calculations). It treats non-numeric items in arrays as zeros. Array arguments must be the same size. Otherwise, SUMPRODUCT will generate a #VALUE! error value. Logical tests inside arrays will create TRUE and FALSE values. In most cases, you'll want to coerce these to 1's and 0's.
+4. AVERAGE(range) – Average of cell range, can specify numbers also by , separator.
+5. MIN(range) – Minimum of cell range, can specify numbers also by , separator.
+6. MAX(range) – Maximum of cell range, can specify numbers also by , separator.
+7. COUNT(range) – Counts total number of numeric cells.
+8. COUNTA(range) – Counts total number of numeric & text cells.
+9. COUNTBLANK(range) – Counts total number of only blank cells.
+10. COUNTIF(range, “criteria”) – Counts total number of cells by given criteria.
+11. PRODUCT(range) – Calculates product*(Multiply) of cell range, can specify numbers also by , separator.
+12. IF(logical_test, [“value_if_true”], [“value_if_false”]) – it can further also be nested after true value by adding another IF. The value can be numbers or words or calculations by location of cells or mentioning.
+13. IFERROR(value, value if error) – Can be added before any formula to avoid errors.
+14. OR(logic)(+) – This is a logical operator also. If any of this logic is True then will return True. Can add multiple logic calculations.
+15. AND (logic)(*) – This is a logical operator also. If any one of the logics is False, it will return False. All the logical conditions need to be satisfied to return True. Can add multiple logic calculations.
+LOOKUP FUNCTIONS :
+16. VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) – Vertical top to bottom lookup where table array is wherein to search and col_index for column for which value is returned and range lookup  has TRUE(1) for approx match and FALSE(0) for exact match. The whole Table should be specified in table array. Lookup value should be which is common for both table search.
+17. HLOOKUP((lookup_value, table_array, col_index_num, [range_lookup]) – Similar to Vlookup but looks up for value  from left to right.
+18. INDEX(array, row_num, [column_num]) – Returns the value of a cell in a table based on the column and row number. (Works on single column only).
+19. MATCH(lookup_value, lookup_array, [match_type]) - Returns the position of a cell in a row or column (select the lookup array range such that first column/row should as per lookup value only)
+20. CHOOSE(index_num, value) – Return a value from the list based on a specified position.
+TEXT FUNCTIONS:
+21. LEFT(text,[num_chars]) – To extract text from specified number of left characters including spaces.
+22. RIGHT(text,[num_chars]) – To extract text from specified number of right characters including spaces.
+23. LEN(text) – To get the length of the text along with spaces.
+24. MID(text, start_num, num_chars) – To extract text from middle with starting point and number of letters.
+25. FIND(“find_text”, within_text, [start_num]) – To find location of the text. (Case sensitive).
+26. REPT(“text”, num_times) – It will repeat the text continuously by specified number of times.
+27. TRIM(“text”) – It will remove extra white spaces from the text.
+28. CLEAN(“text”) - Removes all nonprintable characters from text.
+29. UPPER(“text”) – It will convert the text into Upper Case (Capital letters)
+30. PROPER(“text”) – It will convert the text into first Capital and rest in small letters. 
+31. SUBSTITUTE(“text”, old_text, new_text) - Replace specific whole text in a text string.
+32. REPLACE(“text”, old_text, new_text)  - Replace any text that occurs in a specific location in a text string.
+*13 – 23 are only meant for textual cells.
+33. CONCATENATE(“text”, “text”) – Merges two cell values.(can also be done by adding & between two cell reference)
+34. TEXT(value, format_text) - Applying formatting
+DATE FUNCTIONS:
+35. TODAY() – Returns todays date as formatted date. (* Ctrl + ;)
+36. Add/Subtract Days can simply add + - between two date cell reference
+37. EDATE(start_date, months) – Add or less date based on number of months given. (+ - Months)
+38. Add/Subtract Years – Either calculate months separately or else use  EDATE(start_date,(years*12))
+39. NETWORKDAYS(start_date, end_date,[holidays_range]) – Returns the number of whole working days.
+40. DATEDIF(start_date, end_date, “date format”) – Date Difference.
+41. DATE(year, month ,day) – Combines 3 different cell as a single Date.
+42. WORKDAY.INTL(start_date, days, [weekend], [holidays]) - Workdays with custom weekend (returns date). Work day will not include the start date in the calculations
+
+NOTES:
+1. Numeric Data is always in right of the cell and Textual Data in Left.
+2. $A1 – Absolute Cell Reference – freezing the cell location by adding dollar before column or row or both.(* Fn F4)
+3. Adding ` before anything in cell will convert the cell type to text 
+4. {} - to provide the range to cell-based function {Curly Bracket}
+5. () - Basic Maths (Parentheses)
+6. [] - references to table [Square Brackets]
+7. When functions have single calculations parameter, array calculations can be done by simply adding {=function(:)} to solve as an array.
+8. Double Negative (--) before any logical statement will return 1(TRUE) / 0 (FALSE) Numerals.
+9. Column                       Criteria         Functions
+Single                          Single           SUMIF, COUNTIF, AVERAGEIF
+Multiple                      Single           SUMIFS, COUNTIFS, AVERAGEIFS
+Multiple/ Single	      Multiple        DCOUNT, DSUM, DMAX (Database Functions)
+LOGICAL OPERATORS:
+Condition (Operators) - 
+1. Equal to (=) 
+2. Not Equal to (< >)
+3. Greater than (>)
+4. Less than (<)
+5. Greater than equal to (>=)
+6. Less than equal to (<=)
+7. OR(logic) – This is a formula also. If any of this logic is True then will return True. Can add multiple logic calculations.
+8. AND (logic) – This is a formula also. If any one of the logics is False, it will return False. All the logical conditions need to be satisfied to return True. Can add multiple logic calculations.
+CONDITIONAL FORMATTING:
+It is highlighting of cells based on criteria. Like equations, top &  bottom. It can add highlighting colours to cell, text , it can also add symbols, progress bar. New Rules can be added, managed to edit and cleared to delete.
+DATA VALIDATION:
+It is used for creating a drop-down selection where you can add list of selections. 
+Data – Data Validation – List – Add source or type down.
+TEXT TO COLUMNS:
+To separate two objects from the cell at a particular location. Data – Text to columns. A Delimiter is a must.
+DEFINE NAMES:
+We can give names to specific columns / rows so that while typing no need to add range but just the name itself makes it easy.
+Formulas – Define Names
+CONSOLIDATE TABLE:
+1. Create three tables
+2. Keep cell in the first table  (List1)
+3. Press Ctrl Shift *
+4. Go to Insert - Name- Define
+5. Define Name as List1
+6. Repeat the step 2,3,4,5 for 2 other table (List1, List2)
+7. Go to a blank sheet
+8. Go to Data - Consolidate 
+9. Add the name defined List1,List2,List3 in references
+10. Select top Raw and Left Column
+11. Click on Ok
+SHORCUTS: (Alt+ will lead to most)
+1. Ctrl + A	 To select all the contents in a workbook
+2. Ctrl + B	 To turn highlighted cells bold
+3. Ctrl + C	 To copy cells that are highlighted
+4. Ctrl + D	 To fill the selected cell with the content of the cell right above
+5. Ctrl + E	 To Flash Fill
+6. Ctrl + F	 To search for anything in a workbook
+7. Ctrl + G	 To jump to a certain area with a single command
+8. Ctrl + H	 To find and replace cell contents
+9. Ctrl + I	 	 To italicise cell contents.
+10. Ctrl + K	 To insert a hyperlink in a cell.
+11. Ctrl + L	 To open the create table dialog box.
+12. Ctrl + N	 To create a new workbook
+13. Ctrl + O	 To open a saved workbook
+14. Ctrl + P	 To print a workbook.
+15. Ctrl + R	 To fill the selected cell with the content of the cell on the left.
+16. Ctrl + S	 To save a workbook
+17. Ctrl + U	 To underline highlighted cells.
+18. Ctrl + V	 To paste anything that was copied.
+19. Ctrl + W	 To close your current workbook.
+20. Ctrl + Z	 To undo the last action.
+21. Ctrl + 0	 To hide a column.
+22. Ctrl + 1	 To format the cell contents.
+23. Ctrl + 5	 To put a strikethrough in a cell.
+24. Ctrl + 8	 To show the outline symbols.
+25. Ctrl + 9	 To hide a row.
+26. Ctrl + `	 	 To change the view from displaying cell values to formulas.
+27. Ctrl + ‘	 	 To copy the formula from the cell above.
+28. Ctrl + -	 	 To delete columns or rows .
+29. Ctrl + ;		 Todays Date 
+30. Ctrl + Shift + ;  Todays Time 
+31. Ctrl + Shift + 	 	 To enter the current time in a cell.
+32. Ctrl + Shift + =	 To insert columns and rows.
+33. Ctrl + Shift + ~	 To switch between displaying Excel formulas or their values in cell.
+34. Ctrl + Shift + @	 To apply time formatting.
+35. Ctrl + Shift + !	 	 To apply comma formatting.
+36. Ctrl + Shift + $	 To apply currency formatting.
+37. Ctrl + Shift + #	 To apply date formatting.
+38. Ctrl + Shift + %	 To apply percentage formatting.
+39. Ctrl + Shift + &	 To place borders around the selected cells.
+40. Ctrl + Shift + _	 To remove a border.
+41. Ctrl + Spacebar	 To select an entire column.
+42. (Alt +O+C+A) OR (Alt + H+O+I) To auto fit columns
+43. Alt+Fn+F1 		 Charts in same sheet
+44. Fn+F11 		 Charts in different sheet
+45. Alt+D+F+F         	 Auto Filter to data
+46. Alt = 			 Auto Sum
+47. Alt+F11		 To open VBA 
