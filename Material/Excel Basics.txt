@@ -22,7 +22,7 @@ FORMULAS:
 
 LOOKUP FUNCTIONS :
 16. VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) – Vertical top to bottom lookup where table array is wherein to search and col_index for 
-    column for which value is returned and range lookup  has TRUE(1) for approx match and FALSE(0) for exact match. The whole Table should be specified in table array. Lookup value should be which is common for both table search.
+    column for which value is returned and range lookup  has TRUE(1) for approx match and FALSE(0) for exact match. The whole Table should be specified in table array.     Lookup value should be which is common for both table search.
 17. HLOOKUP((lookup_value, table_array, col_index_num, [range_lookup]) – Similar to Vlookup but looks up for value  from left to right.
 18. INDEX(array, row_num, [column_num]) – Returns the value of a cell in a table based on the column and row number. (Works on single column only).
 19. MATCH(lookup_value, lookup_array, [match_type]) - Returns the position of a cell in a row or column 
