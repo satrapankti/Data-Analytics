@@ -2,7 +2,9 @@ EXCEL
 FORMULAS: 
 1. SUM(range) - Addition of cell range, can specify numbers also by , separator.(* Alt =)
 2. SUMIF(range, criteria, [sum range]) – Add cells based on certain criteria/condition. 
-3. SUMPRODUCT(array, array) -  multiply both the array values and then sums up the value. (Use Double Negative for easy calculations). It treats non-numeric items in arrays as zeros. Array arguments must be the same size. Otherwise, SUMPRODUCT will generate a #VALUE! error value. Logical tests inside arrays will create TRUE and FALSE values. In most cases, you'll want to coerce these to 1's and 0's.
+3. SUMPRODUCT(array, array) -  multiply both the array values and then sums up the value. (Use Double Negative for easy calculations). 
+   It treats non-numeric items in arrays as zeros. Array arguments must be the same size. Otherwise, SUMPRODUCT will generate a #VALUE! error value. 
+   Logical tests inside arrays will create TRUE and FALSE values. In most cases, you'll want to coerce these to 1's and 0's.
 4. AVERAGE(range) – Average of cell range, can specify numbers also by , separator.
 5. MIN(range) – Minimum of cell range, can specify numbers also by , separator.
 6. MAX(range) – Maximum of cell range, can specify numbers also by , separator.
@@ -11,16 +13,20 @@ FORMULAS:
 9. COUNTBLANK(range) – Counts total number of only blank cells.
 10. COUNTIF(range, “criteria”) – Counts total number of cells by given criteria.
 11. PRODUCT(range) – Calculates product*(Multiply) of cell range, can specify numbers also by , separator.
-12. IF(logical_test, [“value_if_true”], [“value_if_false”]) – it can further also be nested after true value by adding another IF. The value can be numbers or words or calculations by location of cells or mentioning.
+12. IF(logical_test, [“value_if_true”], [“value_if_false”]) – it can further also be nested after true value by adding another IF. 
+    The value can be numbers or words or calculations by location of cells or mentioning.
 13. IFERROR(value, value if error) – Can be added before any formula to avoid errors.
 14. OR(logic)(+) – This is a logical operator also. If any of this logic is True then will return True. Can add multiple logic calculations.
-15. AND (logic)(*) – This is a logical operator also. If any one of the logics is False, it will return False. All the logical conditions need to be satisfied to return True. Can add multiple logic calculations.
+15. AND (logic)(*) – This is a logical operator also. If any one of the logics is False, it will return False. 
+    All the logical conditions need to be satisfied to return True. Can add multiple logic calculations.
 
 LOOKUP FUNCTIONS :
-16. VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) – Vertical top to bottom lookup where table array is wherein to search and col_index for column for which value is returned and range lookup  has TRUE(1) for approx match and FALSE(0) for exact match. The whole Table should be specified in table array. Lookup value should be which is common for both table search.
+16. VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) – Vertical top to bottom lookup where table array is wherein to search and col_index for 
+    column for which value is returned and range lookup  has TRUE(1) for approx match and FALSE(0) for exact match. The whole Table should be specified in table array. Lookup value should be which is common for both table search.
 17. HLOOKUP((lookup_value, table_array, col_index_num, [range_lookup]) – Similar to Vlookup but looks up for value  from left to right.
 18. INDEX(array, row_num, [column_num]) – Returns the value of a cell in a table based on the column and row number. (Works on single column only).
-19. MATCH(lookup_value, lookup_array, [match_type]) - Returns the position of a cell in a row or column (select the lookup array range such that first column/row should as per lookup value only)
+19. MATCH(lookup_value, lookup_array, [match_type]) - Returns the position of a cell in a row or column 
+    (select the lookup array range such that first column/row should as per lookup value only)
 20. CHOOSE(index_num, value) – Return a value from the list based on a specified position.
 
 TEXT FUNCTIONS:
@@ -73,10 +79,12 @@ Condition (Operators) -
 5. Greater than equal to (>=)
 6. Less than equal to (<=)
 7. OR(logic) – This is a formula also. If any of this logic is True then will return True. Can add multiple logic calculations.
-8. AND (logic) – This is a formula also. If any one of the logics is False, it will return False. All the logical conditions need to be satisfied to return True. Can add multiple logic calculations.
+8. AND (logic) – This is a formula also. If any one of the logics is False, it will return False. All the logical conditions need to be satisfied to return True. 
+   Can add multiple logic calculations.
 
 CONDITIONAL FORMATTING:
-It is highlighting of cells based on criteria. Like equations, top &  bottom. It can add highlighting colours to cell, text , it can also add symbols, progress bar. New Rules can be added, managed to edit and cleared to delete.
+It is highlighting of cells based on criteria. Like equations, top &  bottom. It can add highlighting colours to cell, text , it can also add symbols, progress bar. 
+New Rules can be added, managed to edit and cleared to delete.
 
 DATA VALIDATION:
 It is used for creating a drop-down selection where you can add list of selections. 
