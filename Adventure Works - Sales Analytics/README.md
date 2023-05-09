@@ -5,4 +5,7 @@ Coming off a successful fiscal year, Adventure Works Cycles is looking to broade
 
 ### Solving Requirements by generating Dashboard using different tools like Excel, MYSQL, Tableau and PowerBI.
 
-Tableau File can also be viewed here: https://public.tableau.com/app/profile/satrapankti/viz/AdventureWorks_16734332639530/AdventureWorks
+Tableau File can also be viewed here: **https://public.tableau.com/app/profile/satrapankti/viz/AdventureWorks_16734332639530/AdventureWorks**
+
+##### Adventure Works.pdf
+It is the PowerBI file in pdf form.
