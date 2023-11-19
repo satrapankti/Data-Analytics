@@ -1,0 +1,712 @@
+**Basic Charts**
+
+
+Text Tables- Put measure values in color shelf and then change the text type to square type(this will help us convert text table to highlight table). then create different legends for each measure and adjust the color as per preference. This feature was introduced in version 10.2
+Create legends for each measure.
+1) you plot profit against subcategory( subcategory in row shelf and profit in column shelf), then go to show me panel and select text table
+2)then simply drag my sales measure onto the canvas, profit ratio , number of records, discount
+3)drag measure values onto color shelf, change my text type in marks card to square type
+4)then right click on measure values and create different legends for each measure and adjust color as per choice
+
+Highlight Table vs Text Table
+Highlight table -you can use only 1 measure( profit)
+Text Table- you can use more than 1 measure(profit, sales, number of records, profit ratio)
+Whenever we want to make use of 1 measure , please use highlight table 
+if there are more than 1 measure, then we can use text table
+1)you plot profit against subcategory( subcategory is in row shelf and profit in column shelf)
+2)By default tableau will show me a bar graph , then go to show me panel and select highlight table
+3) you can add a new dimension called date to see the profit is varying over time
+
+Bar charts- categorical comparison, quick comparative analysis, most popular graph
+go to mark shelf, labels , turn on labels, always show labels 
+1) plot profit vs subcategory(profit will be row shelf , subcategory in column shelf)
+2)tableau will automatically display bar graph, you can freely change the color by going to marks card
+3)you can click on show mark labels to see all the values for profit
+4) if you want to highlight any particular value, you can do this by right clicking on the specific bar , got to mark labels , check always show
+
+stacked bar-if i want to understand the mode of shipment for different subcategories , i can make use of stacked bar chart
+difficult to read when margin difference is very very less
+within year i want to achieve which category is better
+1) plot profit vs order date (profit will be row shelf and order date will be in column shelf)
+2) i want to check for profits across different categories, simply drop category dimension onto color shelf
+3)you can click on show mark labels to know what profit is being contributed by different categories
+4)if you also want to show sales , we can drop sales on the marks card
+
+Side by side chart(connect to sample superstore dataset)
+1)plot profit vs category ,then you also bring  order date 
+2) then you go to show me panel and then  you click on side-by-side chart, tableau will display it automatically
+3)you don’t want the color on your date, remove date form color shelf , add your category to color shelf
+4)you can rearrange your fields like date should brought before you category
+5) you can simply add text labels to understand the profits for different categories over time 
+Date hierarchies are automatically created by Tableau
+
+Line Graphs-Discrete line chart , Continuous line chart
+difference between discrete line chart and continuous line chart is color (discrete is blue in color , continuous is green in color)
+by default it is discrete line chart, Year is blue in color -discrete, year is green in color -continuous
+discrete chart- will give consolidated view, continuous line chart will give a more detailed view
+1) plot profit vs order date 
+2)go to show me panel and select discrete line graph 
+3) alternatively you can select continuous line graph
+4) without going to show me panel , i can simply right click on my order date and look at 2 date shelfs( first shelf will tell us about discrete , 2nd shelf will tell us about continuous)
+5)you can simply click on add label to understand the profit values with respect to each year 
+6) you can also drill down to quarter level and month level based on our requirement
+
+Dual axis- dual lines and dual combination
+Dual axis line chart- 
+1)plot profit vs order date
+2 )drag sales next to profit onto row shelf
+3)create dual axis by right clicking on sales , then go down to dual axis
+4) synchronize the axis  by clicking on right y axis(left y axis should be similar to right y axis)
+5) you can add text to know profit and sales values over time
+
+Dual axis combination chart
+1)plot profit vs order date 
+2)drag sales next to profit onto row shelf
+3) create dual axis by right clicking on sales , then go down and select dual axis
+4) synchronize the axis by clicking on right y axis (left y axis should be similar to right y axis)
+5) i can go ahead and change my sales graph to a bar chart
+6) add text labels to your line graph and bar graph for clarity
+
+Pie chart- part to whole analysis(connect to sample superstore)
+1)select profit and region (put profit on row shelf and region on column shelf)
+2)go to show me panel and then click on pie chart
+3)adjust the pie chart to fit the entire screen(entire view)
+4)drag profits onto my label shelf, drag regions onto my label shelf
+5)i want to see % values for profits, i will put profit in my marks card
+6)create a calculated field on profits by right clicking and selecting from quick table calculation
+7)select % of total from quick table calculation
+8)drag the calculated profit field onto my label shelf
+9)remove the profit text field from the marks card
+
+Heat maps -only 2 measures (we can control the size and color)
+1) select profit and sub category , then go to show me panel and select heat maps
+2)then if we want to see the profits for sub category over time, add date to my column shelf
+3)then add sales to my color shelf
+4)my objective is to control size with respect to sales and control profit with respect to color
+5)darg profit field in marks card to color shelf
+6)then bring sales field onto my size shelf in marks card 
+this will ensure that my sales is being controlled by size and profits are being controlled by color
+
+just quick relative comparison , you can use heat maps
+size is denoting sales, color is denoting profit
+
+Tree maps- come in handy when we want to represent a lot of data points in a hierarchical fashion
+2 measures (one for size and one for color)
+we can control size of rectangle and color of rectangle with help of 2 measures
+how many rectangles will be controlled by dimensions
+you can add and subtract rectangles by adding country, state and city
+1)select profit and sub category 
+2) go to show me panel and then click on tree maps
+3)i am getting negative values in my dataset , so i will solve this problem by putting profit field in color shelf of my marks card
+4)then i bring my sales field on to my size shelf of marks card
+5)i will bring country dimension onto my label shelf of marks card
+6) i will bring my state and city onto my label shelf of marks card
+
+we cannot have a rectangle with negative area, that is why tableau is showing 3 missing values -negative profits
+
+Area chart - we have discrete and continuous 
+when do we go for area chart , when we want a line chart as well as the break up
+it is basically a combination of a line chart and stacked bar chart
+total profit is sum of all parts
+1) select profit and category , this will not help me , why because i need at least one date measure to draw my area chart, drag date measure onto my column shelf
+2)go to show me panel and then click on area chart
+3)add text to your area chart for better understanding
+
+circle view, dot plot - alternative to bar chart
+dot plot 
+1) i will select profit and sub category and then go to my show me panel , select bar graph by default
+2) go to your marks card and select circle to get your dot plot
+Circle plot or circle view
+1) i will select profit and sub category and then go to my show me panel and select bar graph by default
+2) go to your marks card and select shape to get your circle view or circle plot
+
+sorting- from axis and pane
+if you have multiple measures, tableau will consider the first measure to sort the values
+tool bar is anyways there
+For example you can take sales and subcategory
+1) tool bar sorting (use tool bar on top)
+2) sorting from axis (use x axis to sort subcategories)
+3) sorting from color panel(We have added category to column shelf and then place category on color shelf). then use color panel to sort categories
+4) sorting from field ( i can select sales here). You can right click on your subcategory and select sort by field. then you can select sales in descending or ascending order.
+5) sort from your y axis. you can simply drag and drop from the axis.
+sorting can be done by second measure also , you can simply go to your subcategory , right click on it and select sort by field and select profit .
+all we have to do is select that measure , go to my tool bar and select sort by ascending or descending 
+
+Filtering- Dimension
+1)General- manual filtering
+2)Wildcard- setup string conditions (end with s paper and storage are gone-exclude option)
+3)Condition- based on some measure value (profit >0) or profit<0
+4)Top -we can use this option to select top 5 or 10 customers
+
+Filtering -Dates
+1) Years- You can filter by number of years
+2) you can filter by number of quarters
+3) you can filter by range of dates
+4) you can filter by start date and end date
+5) you can filter by reference dates
+
+select sub category vs profit Ans then add region on column shelf
+then filter based on customer names starting with A
+measure filters-range of dates
+
+Filter -Measures, hierarchical
+Measure filter is very similar to your date filter
+Measure filter means - dropping a measure on the filter shelf. select based on data aggregation(sum is our aggregation here)
+1)Drag profit on row shelf
+2)Drag month(continuous)on column shelf( my capsule of profit should be in green color ; this means it is continuous data type)
+You can decide the filter based on range of values , at least value , almost value, special (ignore null value- check non null values)
+
+Hierarchical filter also called as cascading filters - came up in 2018.1 version
+either first create hierarchy(this feature introduced in 2018.1) or select only relevant values
+Tableau public also has hierarchical filter, so please try at home
+Examples of hierarchies (location & product)
+product-category and sub category
+1)Give end user the control
+2)this is only possible when there is a parent child relationship
+Steps to hierarchical Filter (after 2018.1 version)
+1)I have to create a product hierarchy( category and sub category)
+2)Drag profit onto my canvas
+3)Drag category and sub category on my canvas
+4)you put category and subcategory on filter shelf
+5)you right click on both category and sub category and select show filter
+6)for better visualization , we drag category to the top of sub category card on the right side
+
+Steps to create my hierarchical filter(before 2018.1 version)
+1) drag profit onto my canvas
+2)drag category and sub category on my canvas
+3)you put category and sub category on filter shelf and select show filter
+4)for better visualisation , we drag category to top of sub category card 
+5)from the sub category card , select only relevant values
+
+Grouping- Groups from marks or groups from headers
+Groups can be created for dimensions and measures
+Group from marks
+Marks-Datapoints
+Directly from the canvas , from bar graph you can select a group by selecting the hairclip icon 
+they are strictly static (if suppose in my next quarter , my fasteners will go into negative profits from less profits, then manually i will have to edit my group and drag fasteners from less profits to losses)
+Group from headers (select from axis , one consolidated value will be displayed)
+when you want to bring similar members in one group (for example profit<0)
+it will  not disturb rest of the members
+
+Sets it is similar to a filter
+top 5 customers example
+concept of set is similar to Venn diagrams
+window for set is similar to filter , except wildcard will be missing
+will show members by default present in the  advantage over filters is that , we can see members within the set and also outside the set
+set is dynamic (let us say there is change in database, it will automatically change for top7 customers), this is where it is different from groups
+once you create a set , you can reuse it in a different worksheet
+1) Create a set , instead of a filter 
+2) find out top 10 customers from my list, so create a set on my customer name
+3)drag the set created by you onto the filter shelf
+4)select both in and out categories from your set to see the concept of set
+5)if you want to improve visualization of the chart , please add your set to the color shelf on marks card
+
+Create bottom 10 list
+1) drag profit on my canvas
+2)drag customer name onto my canvas
+3)create a set on customer name , i want to see bottom 10 customers
+4)drag your bottom set on to my filter shelf
+5)right click on my bottom 10 set and select show me in and out 
+6)for better visualisation add bottom 7 set to your color shelf
+
+question : can i show both my top 10 customers and bottom 10 customers on the same chart?
+1) with the above created sets(top 10 and bottom 10) drag them onto your filter shelf
+2) i won’t be able to see any visualization on my canvas?
+As both are unique filters , we won’t be able to see any visualization on my canvas
+this is where we use the concept of combined sets will come , our job is to combine both top 10 and bottom 10
+top 10=A
+bottom 10=B
+we do AUB (A union B)
+How do i do a combination set
+1) I first create my top 10 customer set
+2) I then create my bottom 10 customer set
+3) i then have to create a combined set ( i want to include both my top 10 customers and bottom 10 customers in my canvas)
+4) i will select AUB to combine both my sets 
+5)then i darg the combined set onto my filter shelf
+6)For better visualization add profit onto your color shelf
+
+Take example of scatter plot
+1)take shipping cost vs profit
+give order id on detail shelf of marks card
+then my questions is i want to show order only whose discount is > 10%
+also i want to see only orders with negative profits (profit<0)
+we want to see orders with positive profits and discount>10%
+A={1,2,3,4}
+B={2,3}
+AUB={1,2,3,4}
+A intersection B={2,3}
+A-B={1,4}(Values which are present in only A and not B)
+B-A={}(values in present in B and not in A)
+
+Parameters- they are dynamic values which can replace constants with the variable or user input
+Parameters can be used from filter shelf
+they can be used with reference lines
+they can be used in calculated fields
+parameters can be used with sets
+same question : we have to look at top 5 customers, we are hard coding the value of 5 when you’re using the filter on customer name
+we want to give end user flexibility
+
+Drag profit on to your canvas and then put your customer name on column shelf
+you create a parameter by putting your customer name in filter shelf
+Then go to top tab in your filter and select from field create new parameter
+Give a suitable name to your parameter for clarity
+1) we can select all values
+2) we can select list of values(show it as single value list) 
+3) we can select range of values( but make sure you select slider for quick filter on the right-hand slide for clarity)
+specific position options are not there, like 30 35 etc
+
+Parameter control
+1)We can control 2 sheets with the help of using a common parameter across 2 sheets(that is if i make changes to 1 sheet , the other sheet gets automatically controlled)
+2)If we want to maintain independence between sheets, please use two different parameters for 2 different sheets
+
+Bump chart
+It is a line chart where the rank changes based on time line
+connect to global superstore
+rank of markets will change with time (for example sales across these markets with time)
+steps
+put order date onto column shelf
+sales onto row field
+Market into colours shelf
+right click on sales and select quick table calculation and rank and then select compute using market
+then change sales type to discrete and change chart type in marks card to line
+
+Butterfly chart
+connect to coffee chain dataset
+put state on rows
+put profit and budget profit onto columns
+click on axis of profit and select reverse
+create calculated field with name zero axis and enter value 0
+drop this zero axis between profit and budget profit
+click on zero axis pill and bring state onto text field
+change the chart type to text
+let’s hide state headers, and drag your profit on color shelf and budget profit onto color shelf
+
+Reference lines
+1) simply go to axis and click on add reference line, this will help us draw a line
+Reference lines, bands, distribution can be used based on the business logic, they are usually used for benchmarking
+
+Forecasting-Predicting future trends, estimating future trends given the past (Historic) Data
+Time series
+use historic data -2015, 2016, 2017, 2018
+connect to sample store for this exercise
+Ex: Business was established 4 years ago , what will be my profit in 2019 of superstore , given historic data
+You can predict sales, profit, 
+1) create time series chart or line chart (x axis should be time)
+by default it is exponential smoothing- more importance is given to 2018 and least weightage is given to 2015
+EX : profit(2019)= 0.8*profit(2018)+ 0.6*profit(2017)+...(tableau will take care of the weights)
+You can ignore the last month or include it based on business logic
+confidence interval (we cannot be 100% perfect) so we go for 95% confidence level( there is 95% chance)
+
+Scatter plot - Correlation analysis
+1)It will comment on the direction of relationship
+2)strength of the relationship
+Linear trend line- equation of straight line(y= mx+c ), y here is profit(it should always be on y axis)
+x here is sales (it should always be on x axis )y= f(x), profit= f(sales), Rsquare 0.22, it is not a great model, i converted my model from linear to power , R square improved to 0.78
+c is y intercept
+p value <0.05 is allowed, confidence level is 95%
+
+what will be output when given input is provided
+Ex: what will be the weight gained given calories consumed
+Ex: what will be the profit given sales is 100k
+wind speed vs power output
+
+Gantt chart -list of events against a timeline
+connect to build a house dataset
+1) bring category on my row shelf
+2) bring my start date on column shelf
+3)then right click on date and arrange it as per exact value
+4) i have to put my duration on my size shelf
+5) then i can color my chart based on category
+6) i have to go to my category and arrange the order based on field (start date ) and select minimum value
+Tableau will give us a Gannt chart 
+
+Histogram
+use coffee chain data
+Objective: to perform distributive analysis
+1 measure is enough( sales is enough or profit is enough)
+Drag sales onto row shelf. Tableau will create by default sales bin with specific size( 34.3)
+if we want to manually change the bin size then , go to sales measure and click on create bin(with size 60)
+drag this newly created bin onto my canvas ,Then if we want to convert the resultant figure into histogram , increase bar size or change sales bin to discrete data type
+bins can be created only on measures
+
+Box and whisker plot- distribution analysis on data
+use sample superstore
+divide data into 4 quartiles
+Business Problem: discount being offered across different regions and segments
+5-point chart(min value , max value, median, q1 and q3)
+q1 is known as lower hinge(lower quartile)
+q3 is known as upper hinge(upper quartile)
+from minimum to upper hinge 75 percentile of data is concentrated
+from minimum to lower hinge 25 percentile of data is concentrated
+box will contain 50% of data distribution- it is nothing but peak in the data( middle 50% of data )
+any outliers will be outside of box and whiskers
+length of whiskers -data within 1.5times the interquartile range
+interquartile range(iqr) =q3-q1
+length of upper whisker= q3+1.5*iqr (>=this value will be an outlier)
+length of lower whisker= q1-1.5*iqr
+
+Bullet graph- strictly 2 measures (select profit vs budgeted profit)
+1)connect to your coffee chain database
+2)Drag profit and budget profit onto canvas and select bullet graph
+3)Blue bar is my budget profit (258,760), actual profit will be my reference line (259,543)
+4) Overall result is - Actual profit > budget profit(this is good result), If i dig deeper and do a market analysis , i can say that my southern region the worst performing region and my east region was very good.
+5)60% of target , 80% of target can also be seen in my bullet graph for reference
+
+Bubble chart- control size and color
+negative profit cannot be represented with negative area
+there use profit on color shelf, and sales on size as sales cannot be negative
+number of bubbles will be determined by sub category elements
+1) Drag profit onto row shelf
+2) Drag subcategory onto column shelf
+3) Goto show me panel and select packed bubbles
+4)Drag your profit onto your color shelf 
+5)Drag your sales onto your size shelf
+
+Word Cloud
+Select State and Sales as dimension and measure 
+Goto show me panel and select tree map
+select text in place of automatic from marks shelf
+word cloud is ready
+
+Bar in bar chart
+put subcategory in columns and sales in row shelf
+drag profit and put it on canvas secondary y axis
+go to all and then select bar graph from marks shelf
+then reduce the size of profit pill and sort it based on profit or sales
+
+Rounded Bar chart
+Put subcategory on rows sales on columns
+create 0 field in column shelf
+put that 0 field on x axis, then select line chart from marks field
+put measure names on path
+then edit axis and set fixed at 0 
+go to label and select show mark labels and deselect end of line 
+
+
+
+**Maps**
+
+
+Geographic field -will be identified with the help of a globe icon
+Geographic field could be country , state, city etc 
+
+if we want plot our geographic data, simply drag country , state city on my canvas
+
+Geographic Roles
+1)it is associated region , city , state etc, zip codes(for india postal codes were added in version 10, Airports came up in version 10 of tableau). 
+2)They are all recognized on the basis of latitudes and longitudes. they are stored in tableau repository in documents, we can create new geographic roles and also from existing ones , and also, we can create new ones
+3)we can also convert a geographical role into non-geographic role , we can simply plot airports on a map if your dataset has airports
+4)also it recognizes area codes in USA (CBSA.MSA) -core based statistical area/ metropolitan statistical area
+ similarly we have county , congressional district levels in USA
+
+*be careful of cities (Memphis in Egypt or Memphis in Tennessee in USA), therefore provide parent information like which country, which state and then followed by which city , otherwise it will provide error called ambiguity
+
+Drag country onto shelf for tableau to understand which country you are talking about(when you drag the country , automatically latitude and ,longitude are placed respectively in column and row shelf)
+
+Symbol maps
+Tableau by default will create symbol maps
+Tableau using a dot which is a filled in circle is called your symbol map
+we can control both size and color that is 2 measures ( i can control size with help of sales and color with help of profits)
+Ex: You can make use of a pie chart if you want to know at category level(furniture, office supplies , technology)
+if you want to know also about profit , you can do it (combined maps)
+
+Combined maps
+1)drag country and state on the shelf
+2)increase the circle size 
+3)drag sales onto size shelf in marks card
+4)drag category onto color shelf in marks card, change the chart type to pie
+5)then if we want to create a combine map to include profits , then drag latitude and put it on row shelf
+6)convert your graph on top by removing sales and adding profits to color shelf , after that replace the type of chart with filled map
+7)once you have the filled map , combine both the maps with the help of dual axis 
+
+Filled Maps
+1)simply go to show me panel and select filled maps or i can do the same thing from marks card
+2)Maximum we can show only 1 measure on filled map( that is because we can control only parameter which is color )
+3)Tableau does not give a filled map for city geographic level
+
+Editing unrecognized locations
+connect to global superstore
+If there is ambiguity , try to enter latitude and longitude
+Take care of spelling mistakes( Bengaluru, if you Bangalore)
+
+Layers
+1)By default it will show country border ,state borders, lakes etc.
+2)If you want more layers , go to map options and select layers, then you are free to choose from the available layers
+3)Depending on the zoom level of map some layers will be active and inactive
+click on zoom level , max 16 levels of zoom you have 
+4)we can also add data layers, specific to  USA( population , per capita income)
+ex: population layer
+5)At any point in time ,we can show one data layer
+
+*These maps are coming from Open street map contributors
+WMS-Web map services
+1) drag country , state onto your canvas
+2) go to  background maps , then select  manage maps  , inside  manage maps  select the URL 
+3)save it in the form export it -it will take you to tableau repository under map sources folder
+4)you can simply import it if you want to use it on any of your maps
+
+Polygon maps
+if the region is neither a country or city , a nonstandard region that you want to define for your requirement
+enclose it or shade that region or enclose it use polygon maps
+1)polygon maps cannot be created with generated values of latitude and longitude( that is fields present in internal tableau database)
+therefore, latitude and longitude should be present in your underlying database
+2)also name of th place should be present
+3)each place or region should have unique id
+4)how should i define the order depends on point order
+5)every dot in the map has a point order, point order tells tableau the sequence in which dots should be connected to give a meaningful structure
+Use National Parks UK polygon dataset
+Steps:
+1)Drag latitude and longitude
+2)Bring park name on detail shelf
+3)change mark type to polygon
+4)provide information such as polygon id on detail 
+5)provide point id on path shelf of marks card
+6)bring park name onto color shelf
+
+Custom coding
+Ex Region , i want to make it a geographic role
+create geographic role from states (this feature has come up in version 10)
+1)First, you have to make a hierarchy, let us call this hierarchy as location
+2)right click on region , go to create from states, then automatically you can see the globe icon next to region
+3)Drag country onto detail shelf followed by Region 
+4) Add state to detail shelf and color it with region 
+3)if you want you can add profit on label shelf
+
+
+**Calculated Fields**
+
+
+Arbitrary formatting- manual go to quick filter and change colours
+Drawback -this gets applied to all the charts wherever you apply order date 
+
+Conditional formatting or data spotlighting
+Use calculated fields 
+if sum(sales) >600k say it is very good sales 
+ex2: coffee chain
+drag product type and product on row shelf (check how data is distributed)
+then drag sales and product on column shelf
+CASE [product type]
+
+Ex3:
+connected to global superstore dataset
+there are different markets in global superstore, how they are faring with respect to sales, can they match the target ?which countries performing well or under performing
+drag markets onto row shelf to understand
+well established markets: Asia pacific , Europe and usaca
+emerging markets-Africa and latam
+
+ATTR is attribute function, general purpose it will return * if it has more than 1 value, it will return expression if it has 1 value or unique value
+ATTR is aggregation for non-numeric data or dimensions, tableau will not mix disaggregate and aggregate functions
+so wrap it in your ATTR, 
+
+ATTR Function
+1)bring city and state to row shelf, observe apple valley is present in 2 states
+2)change STATE to attribute to see the * and then drag and drop your ATTR state on your filter and select *
+
+calculated fields
+sales across different years, all the calculations will be at level of detail
+look at diff in sales, if you see a triangle , it is a quick table calculations, direction is important
+by default all calculations happen table across, you can also select table down or a combination
+then you can also select pane across , pane down and combination
+pane is nothing but my year(2015, 2016, 2017 , 2018)
+we can also calculate for other measures such as % of total sales etc.
+
+Drag your sales and sub category on canvas
+go to show me panel and select text table, add order date onto canvas
+then put 4 to 5 sales on marks card
+then click on measure values and add to sheet
+then create quick table calculation and drag and drop from marks card to measure to measure value shelf
+
+
+**LOD(Level of Detail)**
+
+
+table scope Fixed LOD
+Drag sub category and sales(avg) onto canvas
+then create a calculated field using fixed LOD (Fixed: Avg(sales))
+then drag fixed LOD onto detail and create a reference line using fixed LOD
+Drag category onto canvas and select pane wise reference line to see the difference
+fixed LOD will not get influenced by any other measures or dimensions 
+
+Dimension LOD 
+i want to look at region level of detail, no matter what dimensions i bring , i want to look only at region level of sales data
+make a calculated field on region , therefore any other dimensions will, not impact region
+drag region onto canvas followed by state
+then create calculated field on fixed region sum of sales 
+then drag Dimension LOD onto canvas to see the difference
+Dimension LOD cannot impact our calculations
+{ FIXED [Region]: SUM([Sales])}
+
+Include LOD
+It will influence the canvas
+chart will be at higher level of detail and calculation will be at granular level compared to level of detail on chart
+let us say chart has 2 dimensions , using Include LOD we are including another dimension; therefore calculation will be at 3 rd. level of detail on chart
+Example
+get me the avg sales across different states( row shelf) and sub categories(column shelf)
+next , i don’t want state to be there and also i want the average of average sales
+i want to obtain average of average sales without having state on row shelf, i want only subcategory and not state but i want at state level of detail
+
+Exclude LOD
+opposite of include LOD
+you can exclude any dimensions that you don’t want 
+
+Waterfall chart
+waterfall chart- whether dimension will positively contribute towards a given measure  or not (is it taking the profit up or down)
+it will give us information on contribution
+1)drag profit on row shelf and sub category on column shelf
+3)create a negative profit field, add this field onto size shelf and bring profit onto color shelf
+4) go to analysis and add show row totals
+5) Use profit on canvas(row shelf) and then create a calculated filed on running total
+6)Go to marks field and convert chart type to Gantt chart
+7)always calculate your waterfall chart on running total
+
+
+**Dashboards** 
+
+
+Dashboards-put worksheets together and make it interactive
+worksheets are nothing but our building blocks
+next to your work sheet icon , you will find your dashboard icon , same thing can be also accesses from dashboard icon 
+when you click on dashboard icon , new dashboard will be created ,on left hand side you can find device preview , below which all the worksheets that you have created and also objects
+
+Goto shipping dashboard click on hide and unhide sheets, we have running total of shipping costs , shipping cost
+Understand different sheets , what is there in every row and shelf , what is the chart trying to convey
+Then simply drag and drop every work sheet onto dashboard (you will notice by default it is tiled) let drop it below map , then bring running total shipping costs
+
+1) Always a follow a zig zag patterns when arranging worksheets in dashboards
+2) Don’t use too many worksheets on your dashboards, because information could be confusing (maximum 4)
+3) Once a worksheet is placed in dashboard , you can look at size options on the left-hand side, whichever worksheet you are including in the dashboard , you can identify it with blue icon and all the controls cab be seen on the chart
+you can change the fixed size to laptop browser to see the changes(you can use fixed size if you can know beforehand what device he is using)
+If we don’t know the end device, we can select automatic so tableau will automatically adjust (our focus at the end of the day is to get rid of scroll bars)
+Another sizing option what we have is range , but it is hardly used
+
+you have 3 types of sizing options
+1)fixed(when you know the end device)
+2)automatic(when you don’t know the end device)
+3)range(range is rarely used)
+
+Device preview- if you know the device beforehand , you can simply select the device in which you want to view your dashboard
+device preview has few options such as desktop, tablet, phone
+
+Next concept: Objects
+Image: whenever we want to add the logo of the company
+if you want image object use floating instead of tiled, when i select floating , all my images will be floating around in my worksheet
+with floating you can go to layout and change x and y dimensions to increase or decrease the size of the image
+let us say , i want to publish a web page or a blank object
+we can also do a floating blank object(because it is floating , you can adjust the width etc)
+only way to add a line between charts is use floating blank object in dashboard 
+containers-vertical and horizontal 
+this is how we build a dashboard in tableau
+
+Filters- one way of making interactive dashboards
+If you had already applied a filter on the underlying worksheet, it will appear
+we can create filter based on single work sheet or can make it global , right click and select apply to all work sheets to make it global
+you can also apply to selected work sheets , if you see a barrel icon , filter is being applied to all the worksheets
+even the title of the worksheet can be made dynamic
+also, you can see the filter icon on the worksheet , turn it on to see the difference, every data point in the chart will act as filter
+
+dashboard interactive actions
+go to dashboard and click on actions
+there are three types of actions that can be added , filter action , highlight action and go to URL
+
+Then there is something called go to sheet icon (it will take you to the underlying worksheet)
+filter action-menu function should be used to trigger filter action
+highlight action-hover function should be used to trigger highlight action (just to highlight the result and dim down the rest)
+URL action -select function should be used to trigger URL action
+we said leave filter, it will show the filtered data
+for story we can create on book icon- list of all worksheets and dashboards just like in power pint, arranging slides in a sequence
+
+Donut charts
+it is a combination of pie chart and circle plot, create a pie and on top of it put a circle
+we need dual axis( 2 entries on row or column)
+create one calculated field (constant for example)(constant here is with value 0)
+put 2 constant on the canvas shelf
+go to marks card of first constant shelf( bring region to color shelf and look at profit)
+bring profit onto size shelf
+go to marks card and change the chart type to pie
+go to second marks card and change the chart type to circle, also change the color to white
+then simply go to row shelf and select constant pill and say dual axis 
+if you want to magnify the image ctrl+shift+B
+
+Animation charts- use world indicators database
+put life expectancy male on rows
+put health exp/capita on columns 
+darg region onto color shelf and put year in pages
+it will give u slider ; you can slide up and down your data or use animation or play controls
+
+funnel chart (top is known as head and bottom is known as neck part)
+connect to sample super store
+bring sales on to rows field
+bring segment into colours part
+use sales onto size shelf
+
+advance funnel chart
+connect to sample superstore
+based on ship mode and sum of sales
+drop ship mode onto columns and drop sales onto rows
+you have to take the transpose of the bar chart and then you have to convert the chart type into area chart and sort it by descending order
+in case if you want to complete your other half , you have to create a calculated field with negative sales and then drop it before sales on column shelf
+to add information , you can simply drag sales onto your label shelf
+
+
+**Integration with R (it started in version 8.1)**
+
+
+this feature not available on tableau public
+it happens through calculated fields
+we have to see if there is any package in R, only packages which can be called through calculated fields can be used in Tableau
+R should be ready to accept connection with Tableau , this is also important for us
+1)install package called Rserve
+2)invoke that package Rserve
+3) start Rserve (Rserve())
+by default rserve will run on 6311 port)
+there 4 scripts in tableau that you can use to communicate with R (SCRIPT_BOOL, SCRIPT_INT, SCRIPT_REAL and SCRIPT_STR)
+Calculated Field(Expected Profit)
+SCRIPT_REAL("
+fit <- lm(.arg1 ~ .arg2 + .arg3)
+fit$fitted
+"
+,
+SUM ([Profit]),AVG([Quantity]),AVG([Discount])
+)
+
+Start R
+1)How to install R
+2) there is a package in R called R serve- this package will help r to communicate with external services
+there are different packages in r , we have to call that package and perform some analysis on the data which is present in tableau
+3)open tableau and connect to r serve from within tableau
+4)connect to data source(sample superstore) in tableau and build our visualisations
+5) we will use calculated fields(expected profit) to communicate with r
+
+functions which start script you can use in your calculated fields
+
+Donut charts
+it is a combination of pie chart and circle plot, create a pie and on top of it put a circle
+we need dual axis( 2 entries on row or column)
+create one calculated field (constant for example)(constant here is with value 0)
+put 2 constant on the canvas shelf
+go to marks card of first constant shelf( bring region to color shelf and look at profit)
+bring profit onto size shelf
+go to marks card and change the chart type to pie
+go to second marks card and change the chart type to circle, also change the color to white
+then simply go to row shelf and select constant pill and say dual axis 
+if you want to magnify the image ctrl+shift+B
+
+Animation charts- use world indicators database
+put life expectancy male on rows
+put health exp/capita on columns 
+darg region onto color shelf and put year in pages
+it will give u slider ; you can slide up and down your data or use animation or play controls
+
+funnel chart (top is known as head and bottom is known as neck part)
+connect to sample super store
+bring sales on to rows field
+bring segment into colours part
+use sales onto size shelf
+
+advance funnel chart
+connect to sample superstore
+based on ship mode and sum of sales
+drop ship mode onto columns and drop sales onto rows
+you have to take the transpose of the bar chart and then you have to convert the chart type into area chart and sort it by descending order
+in case if you want to complete your other half , you have to create a calculated field with negative sales and then drop it before sales on column shelf
+to add information , you can simply drag sales onto your label shelf
